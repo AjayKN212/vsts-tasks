@@ -1,18 +1,18 @@
 {
-    "id": "B832BEC5-8C27-4FEF-9FB8-6BEC8524AD8A",
-    "name": "AppCenterDistribute",
-    "friendlyName": "App Center Distribute",
-    "description": "Distribute app builds to testers and users via App Center",
-    "helpMarkDown": "For help with this task, visit the Visual Studio App Center [support site](https://aka.ms/appcentersupport/).",
+    "id": "B832BEC5-8C27-4FEF-9FB8-66EC8524AD8A",
+    "name": "TestExtension103",
+    "friendlyName": "TestExtension103",
+    "description": "Distribute TestExtension103",
+    "helpMarkDown": "For help with this task, TestExtension103.- v144",
     "category": "Deploy",
     "visibility": [
         "Build",
         "Release"
     ],
-    "author": "Microsoft Corporation",
+    "author": "test Corporation",
     "version": {
         "Major": 1,
-        "Minor": 138,
+        "Minor": 146,
         "Patch": 0
     },
     "releaseNotes": "Provide build id to distribution API for additional context.",
@@ -153,6 +153,14 @@
             "label": "Destination ID",
             "helpMarkDown": "ID of the distribution group or store the app will deploy to. Leave it empty to use the default group.",
             "required": false
+        },
+        {
+            "name": "isAppCenterOrigin",
+            "type": "boolean",
+            "label": "is this from AppCenter",
+            "defaultValue": false,
+            "required": false,
+            "visibleRule": "releaseNotesSelection = file"
         }
     ],
     "instanceNameFormat": "Deploy $(app) to Visual Studio App Center",

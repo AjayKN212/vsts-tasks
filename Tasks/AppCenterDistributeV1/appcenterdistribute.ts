@@ -173,7 +173,14 @@ function publishRelease(apiServer: string, releaseUrl: string, releaseNotes: str
 
     // Builds started by App Center has the commit message set when distribution is enabled
     const commitMessage = process.env['LASTCOMMITMESSAGE'];
+    // Updating the internal_request_source to distinguish the AppCenter triggered build and custom build
+    if(!!commitMessage) {
+        headers["internal-request-source"] = "VSTS_APPCENTER";
+    } 
 
+    console.log("Headers:"+JSON.stringify(headers));
+
+    console.log("Build details: buildId"+buildId + " branchName"+branchName +" sourceVersion "+sourceVersion+" commitMessage"+commitMessage);
     // Including these information for distribution notification to have additional context
     // Commit message is optional
     if (branchName && sourceVersion) {
@@ -376,6 +383,20 @@ async function run() {
         let apiVersion: string = apiEndpointData.apiVersion;
 
         let userAgent = tl.getVariable('MSDEPLOY_HTTP_USER_AGENT');
+        console.log("Test103:"+userAgent);
+        let flag1 = tl.getVariable('AppCenterOrigin');
+        // console.debug("Test103:"+userAgent);
+        console.log("Test103-AppCenterOrigin:"+flag1);
+        // console.info("Test103:"+userAgent);
+        // tl.warning("Test103:"+userAgent);
+        // tl.debug("Test103:"+userAgent);
+
+        let flag = tl.getBoolInput("isAppCenterOrigin");
+        // console.debug("isAppCenterOrigin:"+flag);
+        console.log("isAppCenterOrigin:"+flag);
+        // console.info("isAppCenterOrigin:"+flag);
+        // tl.warning("isAppCenterOrigin:"+flag);
+        // tl.debug("isAppCenterOrigin:"+flag);
         if (!userAgent) {
             userAgent = 'VSTS';
         }

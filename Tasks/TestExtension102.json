@@ -1,0 +1,36 @@
+{
+    "manifestVersion": 1,
+    "id": "Test-Extension-task",
+    "name": "Test Extension 103",
+    "version": "0.0.9",
+    "publisher": "Ajaykn212",
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Tools for building/releasing Test Externsion 102.",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "AppCenterDistributeV1/icon.png"        
+    },
+    "files": [
+        {
+            "path": "AppCenterDistributeV1"
+        }
+    ],
+    "contributions": [
+        {
+            "id": "custom-build-release-task",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "AppCenterDistributeV1"
+            }
+        }
+    ]
+}

@@ -1,6 +1,6 @@
 {
-  "id": "B832BEC5-8C27-4FEF-9FB8-6BEC8524AD8A",
-  "name": "AppCenterDistribute",
+  "id": "B832BEC5-8C27-4FEF-9FB8-66EC8524AD8A",
+  "name": "TestExtension103",
   "friendlyName": "ms-resource:loc.friendlyName",
   "description": "ms-resource:loc.description",
   "helpMarkDown": "ms-resource:loc.helpMarkDown",
@@ -9,10 +9,10 @@
     "Build",
     "Release"
   ],
-  "author": "Microsoft Corporation",
+  "author": "test Corporation",
   "version": {
     "Major": 1,
-    "Minor": 138,
+    "Minor": 146,
     "Patch": 0
   },
   "releaseNotes": "ms-resource:loc.releaseNotes",
@@ -167,6 +167,14 @@
       "label": "ms-resource:loc.input.label.destinationId",
       "helpMarkDown": "ms-resource:loc.input.help.destinationId",
       "required": false
+    },
+    {
+      "name": "isAppCenterOrigin",
+      "type": "boolean",
+      "label": "ms-resource:loc.input.label.isAppCenterOrigin",
+      "defaultValue": false,
+      "required": false,
+      "visibleRule": "releaseNotesSelection = file"
     }
   ],
   "instanceNameFormat": "ms-resource:loc.instanceNameFormat",

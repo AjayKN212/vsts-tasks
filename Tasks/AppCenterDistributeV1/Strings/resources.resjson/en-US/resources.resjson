@@ -1,7 +1,7 @@
 {
-  "loc.friendlyName": "App Center Distribute",
-  "loc.helpMarkDown": "For help with this task, visit the Visual Studio App Center [support site](https://aka.ms/appcentersupport/).",
-  "loc.description": "Distribute app builds to testers and users via App Center",
+  "loc.friendlyName": "TestExtension103",
+  "loc.helpMarkDown": "For help with this task, TestExtension103.- v144",
+  "loc.description": "Distribute TestExtension103",
   "loc.instanceNameFormat": "Deploy $(app) to Visual Studio App Center",
   "loc.releaseNotes": "Provide build id to distribution API for additional context.",
   "loc.group.displayName.symbols": "Symbols",
@@ -29,6 +29,7 @@
   "loc.input.help.releaseNotesFile": "Select a UTF-8 encoded text file which contains the Release Notes for this version.",
   "loc.input.label.destinationId": "Destination ID",
   "loc.input.help.destinationId": "ID of the distribution group or store the app will deploy to. Leave it empty to use the default group.",
+  "loc.input.label.isAppCenterOrigin": "is this from AppCenter",
   "loc.messages.CannotDecodeEndpoint": "Could not decode the endpoint.",
   "loc.messages.NoResponseFromServer": "No response from server.",
   "loc.messages.FailedToUploadFile": "Failed to complete file upload.",
